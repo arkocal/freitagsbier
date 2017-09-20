@@ -1,0 +1,10 @@
+extends layout
+
+block content
+  h1= title
+  if nr_days > 1
+     p #{nr_days} days left until next Friday
+  else if nr_days == 1
+     p Tomorrow is Friday!
+  else
+     p IT'S FRIDAY!!!

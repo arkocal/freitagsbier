@@ -1,0 +1,26 @@
+<html>
+  <head>
+    <title>Freitagsbier</title>
+    <script type="text/javascript">
+      function on_load(){
+          var d = new Date();
+          var days_to_friday = (12 - d.getDay())%7;
+          var days_left_p = document.getElementById("days_left");
+          if (days_to_friday == 0)
+              days_left_p.innerHTML = "It's Friday!";
+          else if (days_to_friday == 1)
+              days_left_p.innerHTML = "Tomorrow is Friday";
+          else
+              days_left_p.innerHTML = days_to_friday + " days left until next Friday";
+      document.getElementById("beer").src = "beer_" + days_to_friday + ".png";
+      }
+      window.onload = on_load;
+    </script>
+  </head>
+  <body>
+    <span style="text-align:center;margin:auto; display:block">
+      <p id="days_left"> B </p>
+      <img id="beer" src="img_1.jpg" />
+    </span>
+  </body>
+</html>
