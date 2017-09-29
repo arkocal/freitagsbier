@@ -19,10 +19,16 @@
     </script>
   </head>
   <body>
+    <div id=login_window>
     <span style="text-align:center;margin:auto; display:block">
-      <p id="days_left" style="font-size:24px"> B </p>
-      <script src="./javascripts/beer_generator.js" />
-      <img id="beer" src="img_1.jpg" />
+      <p id="days_left" style="font-size:24px">  </p>
     </span>
+    <form action="/" method="post">
+	<input style="margin-top:0px" type="text" placeholder="username" name="username"> <br/>
+	<input style="margin-top:5px; margin-bottom:15px" type="password" placeholder="password" name="password"> <br/>
+	<input type="submit" value="Cheers!">
+      </form>
+    </div>
+
   </body>
 </html>
