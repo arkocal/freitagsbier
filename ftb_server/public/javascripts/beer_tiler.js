@@ -16,6 +16,8 @@ function TileBeer () {
 	    next_canv.style = "height:100%; width=" + real_size + "%";
 	    next_canv.id = "beer_" + i +"_"+ j;
 	    next_div.appendChild(next_canv);
+	    console.log(next_canv.getContext('2d'));
+	    PourBeer(next_canv);
 	}
         page.appendChild(next_div);
     }
