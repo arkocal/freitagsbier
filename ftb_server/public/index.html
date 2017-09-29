@@ -2,7 +2,9 @@
   <head>
     <title>Freitagsbier</title>
     <link rel="stylesheet" href="/stylesheets/style.css"/>
+    <script type="text/javascript" src="javascripts/beer_tiler.js"></script>
     <script type="text/javascript">
+
       function on_load(){
           var d = new Date();
           var days_to_friday = (12 - d.getDay())%7;
@@ -12,23 +14,25 @@
           else if (days_to_friday == 1)
               days_left_p.innerHTML = "Tomorrow is Friday";
           else
-              days_left_p.innerHTML = days_to_friday + " days left until next Friday";
-      document.getElementById("beer").src = "beer_" + days_to_friday + ".png";
+      days_left_p.innerHTML = days_to_friday + " days left until next Friday";
+      TileBeer();
       }
       window.onload = on_load;
+
     </script>
   </head>
   <body>
-    <div id=login_window>
-    <span style="text-align:center;margin:auto; display:block">
-      <p id="days_left" style="font-size:24px">  </p>
-    </span>
-    <form action="/" method="post">
-	<input style="margin-top:0px" type="text" placeholder="username" name="username"> <br/>
-	<input style="margin-top:5px; margin-bottom:15px" type="password" placeholder="password" name="password"> <br/>
-	<input type="submit" value="Cheers!">
-      </form>
+    <div id="page" style="width: 100%; height:100%;"> </div>
     </div>
-
+      <div id=login_window>
+	<span style="text-align:center;margin:auto; display:block">
+	  <p id="days_left" style="font-size:24px">  </p>
+	</span>
+	<form action="/" method="post">
+	  <input style="margin-top:0px" type="text" placeholder="username" name="username"> <br/>
+	  <input style="margin-top:5px; margin-bottom:15px" type="password" placeholder="password" name="password"> <br/>
+	  <input type="submit" value="Cheers!">
+	</form>
+      </div>
   </body>
 </html>
